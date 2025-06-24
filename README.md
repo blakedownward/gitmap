@@ -50,11 +50,11 @@ You'll need [Node.js](https://nodejs.org/) (version 16+) and [npm](https://www.n
 
 1.  **Clone this repo:**
     ```sh
-    git clone https://github.com/blakedownward/github-textmap.git
+    git clone https://github.com/blakedownward/gitmap.git
     ```
 2.  **Navigate to the project directory:**
     ```sh
-    cd github-textmap
+    cd gitmap
     ```
 3.  **Install NPM packages:**
     ```sh
@@ -71,7 +71,7 @@ The application should now be running on `http://localhost:5173`.
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/blakedownward/github-textmap/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/blakedownward/gitmap/issues).
 
 1.  Fork the Project
 2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
