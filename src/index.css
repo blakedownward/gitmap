@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make sure we cover the full viewport */
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  --accent-rgb: 168, 235, 18; /* Default fallback green */
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+  /* Light mode opacities */
+  --grad-opacity-start: 0.25;
+  --grad-opacity-mid: 0.15;
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #0f172a; /* Tailwind slate-900 */
+  /* Dark mode opacities */
+  --grad-opacity-start: 0.40;
+  --grad-opacity-mid: 0.25;
+}
+
+/* New simple gradient overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: radial-gradient(ellipse 80% 45vh at bottom, rgba(var(--accent-rgb), var(--grad-opacity-start)), rgba(var(--accent-rgb), var(--grad-opacity-mid)) 25%, transparent 85%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Ensure content stays above the rays */
+#root {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
